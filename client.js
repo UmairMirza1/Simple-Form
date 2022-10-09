@@ -33,7 +33,7 @@ changeLegendColour = function (color) {
       break;
 
     case "blue":
-      legend.style.backgroundColor = "blue";
+      legend.style.backgroundColor = "aqua";
       break;
     case "red":
       legend.style.backgroundColor = "red";
@@ -44,5 +44,4 @@ changeLegendColour = function (color) {
 onsubmit = function () {
   console.log("click");
   alert("Your response has been recorded");
-  return false;
 };
