@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="client.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="client.js"></script>
+    <title>My Web Assignment</title>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <nav>
+        <a id="homeicon" href="https://www.google.com"> Google </a>
+
+        <a id="homeicon" href="https://www.wolframalpha.com"> WolframeAlpha </a>
+        <a id="homeicon" href="https://www.linkedin.com"> LinkedIn </a>
+        <a
+          id="homeicon"
+          href="https://r6.tracker.network/profile/pc/HoldMyGrzmot./"
+        >
+          R6Tracker
+        </a>
+      </nav>
+    </div>
+
+    <div class="maindiv">
+      <div class="first_div">
+        <div class="vid_container">
+          <video class="vid_div" controls>
+            <source src="vid.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="iframe_container">
+          <iframe
+            class="iframe_elem"
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            src="https://en.wikipedia.org/wiki/Arslan_Ash"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <div class="form_container">
+        <form
+          class="form"
+          name="Esports registration"
+          onchange="checkrequirements()"
+          onsubmit="onsubmit()"
+        >
+          <fieldset style="height: 100%">
+            <legend class="legend" id="legend">
+              Esports registration form
+            </legend>
+            <div style="float: right"><p>Connected wifi:Fast-lhr</p></div>
+            <ul>
+              <li>
+                <p>Select legend colour</p>
+                <div class="box_flex">
+                  <div>
+                    <p
+                      id="bluebox"
+                      class="box_blue"
+                      onclick="changeLegendColour('blue')"
+                    ></p>
+                  </div>
+                  <div>
+                    <p
+                      id="greenbox"
+                      class="box_green"
+                      onclick="changeLegendColour('green')"
+                    ></p>
+                  </div>
+                  <div>
+                    <p
+                      id="redbox"
+                      class="box_red"
+                      onclick="changeLegendColour('red')"
+                    ></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label>Name:</label>
+                <input type="text" id="firstname" required />
+              </li>
+
+              <li>
+                <label>Email:</label>
+                <input type="email" id="email" required />
+              </li>
+
+              <li>
+                <label>Phone number</label>
+                <input type="number" id="phone_number" required />
+              </li>
+
+              <li>
+                <label>CNIC</label>
+                <input type="number" id="cnic" required />
+              </li>
+
+              <li>
+                <label for="dob">Date Of Birth:</label>
+                <input type="date" id="dob" name="birthday" required />
+              </li>
+
+              <li>
+                <p>
+                  <label for="file" style="cursor: pointer">Upload Image</label>
+                </p>
+                <input type="file" accept="image/*" name="image" id="file" />
+              </li>
+
+              <li>
+                <p>Gender</p>
+
+                <input type="radio" id="male" name="gender" />
+                <label>Male</label>
+                <input type="radio" id="Female" name="gender" />
+                <label>Female</label>
+              </li>
+
+              <li>
+                <label> Are you registered ?</label>
+                <select id="gender" required>
+                  <option value="male">Yes</option>
+                  <option value="woman">No</option>
+                </select>
+              </li>
+
+              <li>
+                <label> Time:</label>
+                <input type="time" id="time" name="time" required />
+              </li>
+
+              <li>
+                <p>Please select your experience level</p>
+
+                <input
+                  type="checkbox"
+                  id="experienced"
+                  name="exp"
+                  value="experienced"
+                  class="check"
+                />
+                <label for="experienced"> Experienced</label><br />
+                <input
+                  type="checkbox"
+                  id="beginner"
+                  name="exp"
+                  value="beginner"
+                  class="check"
+                />
+                <label for="novice"> Novice</label><br />
+
+                <input
+                  type="checkbox"
+                  id="novice"
+                  name="exp"
+                  value="beginner"
+                  class="check"
+                />
+                <label for="beginner"> Beginner</label><br />
+
+                <input
+                  type="checkbox"
+                  id="bot"
+                  name="exp"
+                  value="novice"
+                  class="check"
+                />
+                <label for="bot"> Bot</label><br />
+
+                <script>
+                  $(document).ready(function () {
+                    $(".check").click(function () {
+                      $(".check").not(this).prop("checked", false);
+                    });
+                  });
+                </script>
+              </li>
+
+              <button
+                style="float: right"
+                id="submit"
+                type="submit"
+                disabled="true"
+              >
+                Submit
+              </button>
+              <input type="reset" value="Clear the form" />
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
